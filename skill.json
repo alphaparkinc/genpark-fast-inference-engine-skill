@@ -1,0 +1,44 @@
+{
+  "name": "genpark-fast-inference-engine-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Disaggregated high-speed LLM inference router with LoRA, serverless and on-demand tiers.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "inference",
+    "llm",
+    "lora",
+    "serverless",
+    "enterprise"
+  ],
+  "inputs": {
+    "prompt": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "deployment_tier": {
+      "type": "string"
+    },
+    "lora_adapter": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "response_text": {
+      "type": "string"
+    },
+    "latency_ms": {
+      "type": "integer"
+    },
+    "tokens_used": {
+      "type": "integer"
+    },
+    "tier_cost_usd": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
